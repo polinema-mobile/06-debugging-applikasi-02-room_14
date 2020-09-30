@@ -21,6 +21,9 @@ public class TesKlikButton {
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
+
+
+
     @Test
     public void click_number_btn() {
         onView(withId(R.id.button1)).perform(click());
@@ -54,10 +57,14 @@ public class TesKlikButton {
         onView(withId(R.id.output)).check(matches(withText("Error")));
         onView(withId(R.id.button_clear)).perform(longClick());
 
+
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("Error")));
         onView(withId(R.id.button_clear)).perform(longClick());
     }
+
+
+
 
     @Test
     public void tambah_baru(){
@@ -67,6 +74,9 @@ public class TesKlikButton {
         onView(withId(R.id.button_equal)).perform(click());
         onView(withId(R.id.output)).check(matches(withText("2")));
     }
+
+
+
 
     @Test
     public void kurang_baru(){
